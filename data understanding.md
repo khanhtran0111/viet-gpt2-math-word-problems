@@ -1,5 +1,21 @@
 # Hiểu dữ liệu
 
+```
+1. Students are not allowed to: 
+- Turn on Internet during the official Kaggle run. 
+- Use external LLMs, APIs, online solvers, or additional answer-generation tools. 
+- Use additional training data outside the provided train.json. 
+- Replace the fixed base model with another model. 
+- Put gold answers into prediction files. 
+- Upload or manually edit test_predictions.json as a separate file. 
+- Modify the scoring logic to misreport results. 
+- Perform test-time learning or update the model on each test example. 
+2. During inference, the model must remain frozen: 
+- No .backward() 
+- No .step() 
+- No online adaptation on test samples
+```
+
 ## 1. Bản chất dữ liệu
 
 Dữ liệu là bài toán **Math Word Problems tiếng Việt** để fine-tune GPT-2 theo dạng causal language modeling: input là câu hỏi, model sinh tiếp lời giải và đáp án. Theo đề bài, chỉ nên dùng `query_vi` làm input và `response_vi` làm target; `type` dùng tốt cho phân tích lỗi/stratified evaluation, không nên đưa vào prompt nếu muốn bám sát yêu cầu “use only Vietnamese fields”. đề bài
