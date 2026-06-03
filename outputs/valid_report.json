@@ -1,0 +1,31 @@
+{
+  "variant": "v18_answer_only_drop_ansaug_only_clean40k",
+  "n": 997,
+  "raw_score": 1989,
+  "score_10": 1.9949849548645937,
+  "exact_10_count": 151,
+  "score_5_count": 40,
+  "score_1_count": 279,
+  "score_0_count": 527,
+  "extract_rate": 1.0,
+  "source_counts": {
+    "model_vote": 997
+  },
+  "inference_policy": {
+    "variant": "v18_answer_only_drop_ansaug_only_clean40k",
+    "model_only": true,
+    "answer_only": true,
+    "no_rule_solver": true,
+    "no_python_math_solver_from_query": true,
+    "allowed_python_usage": [
+      "data_loading",
+      "data_filtering_and_selection",
+      "answer_extraction_from_gold_or_model_output",
+      "local_validation_scoring",
+      "json_export"
+    ],
+    "candidate_sources": [
+      "model_greedy"
+    ]
+  }
+}

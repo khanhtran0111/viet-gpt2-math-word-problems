@@ -1,0 +1,257 @@
+{
+  "overall": {
+    "variant": "v18_answer_only_drop_ansaug_only_clean40k",
+    "n": 997,
+    "raw_score": 1989,
+    "score_10": 1.9949849548645937,
+    "exact_10_count": 151,
+    "score_5_count": 40,
+    "score_1_count": 279,
+    "score_0_count": 527,
+    "extract_rate": 1.0,
+    "source_counts": {
+      "model_vote": 997
+    },
+    "inference_policy": {
+      "variant": "v18_answer_only_drop_ansaug_only_clean40k",
+      "model_only": true,
+      "answer_only": true,
+      "no_rule_solver": true,
+      "no_python_math_solver_from_query": true,
+      "allowed_python_usage": [
+        "data_loading",
+        "data_filtering_and_selection",
+        "answer_extraction_from_gold_or_model_output",
+        "local_validation_scoring",
+        "json_export"
+      ],
+      "candidate_sources": [
+        "model_greedy"
+      ]
+    }
+  },
+  "by_type": [
+    {
+      "type": "GSM_AnsAug",
+      "n": 209.0,
+      "score_10": 1.2488038277511961,
+      "extract_rate": 1.0,
+      "score_10_count": 17.0,
+      "score_5_count": 8.0,
+      "score_1_count": 51.0,
+      "score_0_count": 133.0
+    },
+    {
+      "type": "GSM_SV",
+      "n": 97.0,
+      "score_10": 1.5257731958762886,
+      "extract_rate": 1.0,
+      "score_10_count": 10.0,
+      "score_5_count": 2.0,
+      "score_1_count": 38.0,
+      "score_0_count": 47.0
+    },
+    {
+      "type": "MATH_AnsAug",
+      "n": 171.0,
+      "score_10": 1.8888888888888888,
+      "extract_rate": 1.0,
+      "score_10_count": 26.0,
+      "score_5_count": 4.0,
+      "score_1_count": 43.0,
+      "score_0_count": 98.0
+    },
+    {
+      "type": "MATH_Rephrased",
+      "n": 115.0,
+      "score_10": 2.017391304347826,
+      "extract_rate": 1.0,
+      "score_10_count": 18.0,
+      "score_5_count": 4.0,
+      "score_1_count": 32.0,
+      "score_0_count": 61.0
+    },
+    {
+      "type": "MATH_SV",
+      "n": 41.0,
+      "score_10": 2.1219512195121952,
+      "extract_rate": 1.0,
+      "score_10_count": 7.0,
+      "score_5_count": 1.0,
+      "score_1_count": 12.0,
+      "score_0_count": 21.0
+    },
+    {
+      "type": "GSM_FOBAR",
+      "n": 122.0,
+      "score_10": 2.319672131147541,
+      "extract_rate": 1.0,
+      "score_10_count": 25.0,
+      "score_5_count": 0.0,
+      "score_1_count": 33.0,
+      "score_0_count": 64.0
+    },
+    {
+      "type": "GSM_Rephrased",
+      "n": 197.0,
+      "score_10": 2.6903553299492384,
+      "extract_rate": 1.0,
+      "score_10_count": 37.0,
+      "score_5_count": 20.0,
+      "score_1_count": 60.0,
+      "score_0_count": 80.0
+    },
+    {
+      "type": "MATH_FOBAR",
+      "n": 45.0,
+      "score_10": 2.7777777777777777,
+      "extract_rate": 1.0,
+      "score_10_count": 11.0,
+      "score_5_count": 1.0,
+      "score_1_count": 10.0,
+      "score_0_count": 23.0
+    }
+  ],
+  "preprocess": {
+    "variant": "v18_answer_only_drop_ansaug_only_clean40k",
+    "target_format": "answer_only",
+    "train_policy": {
+      "excluded_train_types": [
+        "GSM_AnsAug",
+        "MATH_AnsAug"
+      ],
+      "preferred_type_quotas": {
+        "GSM_Rephrased": 14000,
+        "GSM_SV": 7000,
+        "GSM_FOBAR": 6000,
+        "MATH_Rephrased": 8000,
+        "MATH_SV": 2500,
+        "MATH_FOBAR": 2500
+      },
+      "max_query_chars": 900,
+      "max_answer_chars": 48,
+      "drop_query_regex": [
+        "\\\\begin\\s*\\{",
+        "\\\\end\\s*\\{",
+        "\\\\includegraphics",
+        "\\[asy\\]"
+      ]
+    },
+    "counts": {
+      "raw_train": 95400,
+      "raw_valid": 1000,
+      "train_candidates_after_filter": 45991,
+      "train_records_selected": 40000,
+      "valid_records": 997,
+      "train_dropped": 49409,
+      "valid_dropped": 3
+    },
+    "raw_train_type_distribution": {
+      "GSM_AnsAug": 18745,
+      "MATH_AnsAug": 16999,
+      "GSM_SV": 9869,
+      "GSM_FOBAR": 10023,
+      "MATH_Rephrased": 12477,
+      "MATH_SV": 3591,
+      "GSM_Rephrased": 20028,
+      "MATH_FOBAR": 3668
+    },
+    "candidate_train_type_distribution": {
+      "GSM_SV": 9195,
+      "GSM_FOBAR": 7749,
+      "MATH_Rephrased": 8090,
+      "MATH_SV": 1942,
+      "GSM_Rephrased": 17057,
+      "MATH_FOBAR": 1958
+    },
+    "selected_train_type_distribution": {
+      "GSM_FOBAR": 6268,
+      "MATH_Rephrased": 8012,
+      "GSM_SV": 7344,
+      "GSM_Rephrased": 14476,
+      "MATH_FOBAR": 1958,
+      "MATH_SV": 1942
+    },
+    "valid_type_distribution": {
+      "GSM_Rephrased": 197,
+      "MATH_Rephrased": 115,
+      "MATH_SV": 41,
+      "GSM_AnsAug": 209,
+      "GSM_SV": 97,
+      "GSM_FOBAR": 122,
+      "MATH_AnsAug": 171,
+      "MATH_FOBAR": 45
+    },
+    "train_drop_summary": {
+      "excluded_type:GSM_AnsAug": 18745,
+      "excluded_type:MATH_AnsAug": 16999,
+      "heavy_latex_or_diagram_query": 1383,
+      "duplicate_query_answer": 11872,
+      "answer_not_numeric_parseable": 245,
+      "query_too_long": 94,
+      "missing_answer": 40,
+      "duplicate_query_conflicting_answer": 31
+    },
+    "valid_drop_summary": {
+      "missing_answer": 3
+    },
+    "selection_report": {
+      "requested_max_samples": 40000,
+      "selected_samples": 40000,
+      "quota_report": [
+        {
+          "type": "GSM_Rephrased",
+          "quota": 14000,
+          "available": 17057,
+          "taken": 14000
+        },
+        {
+          "type": "GSM_SV",
+          "quota": 7000,
+          "available": 9195,
+          "taken": 7000
+        },
+        {
+          "type": "GSM_FOBAR",
+          "quota": 6000,
+          "available": 7749,
+          "taken": 6000
+        },
+        {
+          "type": "MATH_Rephrased",
+          "quota": 8000,
+          "available": 8090,
+          "taken": 8000
+        },
+        {
+          "type": "MATH_SV",
+          "quota": 2500,
+          "available": 1942,
+          "taken": 1942
+        },
+        {
+          "type": "MATH_FOBAR",
+          "quota": 2500,
+          "available": 1958,
+          "taken": 1958
+        }
+      ],
+      "selected_type_distribution": {
+        "GSM_FOBAR": 6268,
+        "MATH_Rephrased": 8012,
+        "GSM_SV": 7344,
+        "GSM_Rephrased": 14476,
+        "MATH_FOBAR": 1958,
+        "MATH_SV": 1942
+      },
+      "candidate_type_distribution": {
+        "GSM_SV": 9195,
+        "GSM_FOBAR": 7749,
+        "MATH_Rephrased": 8090,
+        "MATH_SV": 1942,
+        "GSM_Rephrased": 17057,
+        "MATH_FOBAR": 1958
+      }
+    }
+  }
+}

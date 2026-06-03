@@ -1,0 +1,14 @@
+[
+  {
+    "id": 0,
+    "query_vi": "Nếu Susan đang chơi một trò chơi cờ bàn có 48 ô từ ô bắt đầu đến ô cuối chiến thắng và ở lượt đầu tiên, cô ấy tiến về phía trước tám ô, ở lượt thứ hai, cô ấy di chuyển hai ô nhưng bị đẩy lùi lại năm ô và ở lượt thứ ba. đến lượt cô ấy tiến về phía trước sáu ô, cô ấy cần di chuyển thêm bao nhiêu ô nữa để đến ô cuối và giành chiến thắng trong trò chơi?",
+    "type": "GSM_Rephrased",
+    "model_output": "Đáp án là: 36"
+  },
+  {
+    "id": 1,
+    "query_vi": "Nếu $\\angle PQR = \\angle PRQ$, và độ dài của QR và PR lần lượt là 5 và 7 thì chu vi của tam giác PQR là bao nhiêu?",
+    "type": "MATH_Rephrased",
+    "model_output": "Đáp án là: 19"
+  }
+]
